@@ -1,0 +1,410 @@
+	/* General Styles */
+	body {
+	    font-family: Arial, sans-serif;
+	    margin: 0;
+	    padding: 0;
+	    background-color: #f4f4f4;
+	    text-align: center;
+	    
+	}
+	
+	
+	
+	/* Navbar Styling */
+	nav {
+	    background-color: #333;
+	    padding: 15px;
+	}
+	
+	nav ul {
+	    list-style: none;
+	    margin: 0;
+	    padding: 0;
+	    text-align: center;
+	}
+	
+	nav ul li {
+	    display: inline;
+	    margin: 0 15px;
+	}
+	
+	nav ul li a {
+	    color: white;
+	    text-decoration: none;
+	    font-size: 18px;
+	}
+	
+	nav ul li a:hover {
+	    color: #ffcc00;
+	}
+	
+	/* Hero Sections */
+	.hero {
+	    color: white;
+	    padding: 60px 20px;
+	    text-align: center;
+	    font-size: 1.5em;
+	}
+	
+	/* Profile Picture */
+/* Profile Picture with Hover Effect */
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid white;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4); /* Glowing effect */
+}
+
+	
+	
+	/* Different Background Colors for Each Page */
+	
+	/* Home Page Hero */
+.index-hero {
+    background: linear-gradient(to right, #6a11cb, #2575fc); /* Beautiful gradient */
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    font-size: 1.8em;
+}
+	
+	/* .index-hero:hover{
+	
+	transform: scale(1.1); Slight zoom effect
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4); Glowing effect
+	} */
+	
+	.about-hero {
+	    background: linear-gradient(to right, #ff7e5f, #feb47b);
+	    
+	}
+	
+	.skills-hero {
+	    background: linear-gradient(to right, #00c6ff, #0072ff);
+	}
+	
+	.resume-hero {
+	    background: linear-gradient(to right, #ff9966, #ff5e62);
+	}
+	
+	.contact-hero {
+	    background: linear-gradient(to right, #667eea, #764ba2);
+	}
+	
+/* Projects Page */
+.projects-hero {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+}
+
+/* Grid Layout */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Project Card */
+.project {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, opacity 0.3s ease-out;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+/* Animation for each project appearing */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Hover Effect */
+.project:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Styling */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.btn {
+    transition: all 0.2s ease-in-out;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.modal-content {
+    width: 80%;  /* Increase width */
+    max-width: 900px; /* Ensure it is large enough */
+    height: 90vh; /* Full height */
+    max-height: 90vh;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        height: 85vh;
+    }
+
+    #doc-viewer {
+        height: 75vh;
+    }
+}
+
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: fadeIn 0.3s ease-out forwards;
+}
+
+.modal- {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    text-align: center;
+    position: relative;
+    transform: scale(0.8);
+    animation: popIn 0.3s ease-out forwards;
+}
+
+/* Fade-in animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Modal fade-in and fade-out animations */
+.fade-in-modal {
+    animation: fadeIn 0.3s ease-out forwards;
+}
+
+.fade-out-modal {
+    animation: fadeOut 0.3s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+}
+
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+	/* Page Content */
+	.content {
+	    background: white;
+	    padding: 20px;
+	    max-width: 800px;
+	    margin: 20px auto;
+	    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	    border-radius: 10px;
+	}
+	
+	/* Resume Button */
+	.btn {
+	    display: inline-block;
+	    padding: 10px 25px;
+	    background: #ffcc00;
+	    color: #333;
+	    text-decoration: none;
+	    font-weight: bold;
+	    border-radius: 5px;
+	    transition: 0.3s;
+	}
+	
+	.btn:hover {
+	    background: #ffaa00;
+	    transform: scale(1.1);
+	}
+	
+	/* Scroll Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+	
+	
+	/* Skills Section Styling */
+.skills-hero {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    font-size: 1.5em;
+    position: relative;
+}
+
+/* Skills List Styling Inside Hero */
+.skills-list {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 1.2em;
+}
+
+.skills-list li {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+    border-radius: 20px;
+    list-style: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-list li:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.4);
+}
+
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    transition: border-bottom 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ffcc00;
+}
+
+.nav-link.active {
+    color: #ffcc00; /* Highlight active page */
+    font-weight: bold;
+    border-bottom: 3px solid #ffcc00; /* Add underline effect */
+}
+
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    position: relative;
+    width: 300px;
+}
+
+.popup .btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+	
+
+	
+	/* Footer */
+	footer {
+	    background-color: #333;
+	    color: white;
+	    padding: 10px;
+	    bottom: 0;
+	}
