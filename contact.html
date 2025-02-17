@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   <div id="header"></div>
+<script>
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('header').innerHTML = data);
+</script>
 
+    <section class="hero contact-hero">
+        <h1>Contact Me</h1>
+        <p>Let's connect and collaborate.</p>
+    </section>
+
+    <div class="content">
+    <h2>     </h2>
+    <h3> </h3>
+    <h4></h4>
+        <h2>Get in Touch</h2>
+        <p>Email: yvvnandakishore128@gmail.com</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/yesu-vv-nanda-kishore-goud-76742420a/?originalSubdomain=in" target="_blank">LinkedIn Profile</a></p>
+        <p>GitHub: <a href="https://github.com/nandakishoregoud-bit" target="_blank">GitHub Profile</a></p>
+        <p>Contact number : 9573536697</p>
+    </div>
+
+    <footer>© 2025 My Name | All Rights Reserved</footer>
+    <script defer src="js/script.js"></script>
+</body>
+</html>
