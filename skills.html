@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Skills</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="header"></div>
+<script>
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('header').innerHTML = data);
+</script>
 
+    <section class="hero skills-hero">
+        <h1>My Skills</h1>
+        <p>Technologies I work with.</p>
+
+        <!-- Skill List inside hero section -->
+        <div class="skills-container">
+            <ul>
+                <li>Java & Spring Boot - Eclipse, STS IDE, and VS Code for Backend</li>
+                <li>React Native - Android Studio and VS Code for Frontend</li>
+                <li>HTML, CSS & JavaScript</li>
+                <li>MySQL, MongoDB & Database Management</li>
+            </ul>
+        </div>
+    </section>
+    
+    <div class="content fade-in">
+        <h2>Backend Technologies I Know</h2>
+        <ul>
+            <li>Core Java</li>
+            <li>JDBC</li>
+            <li>Servlets</li>
+            <li>Hibernate</li>
+            <li>Spring Framework</li>
+            <li>Spring Boot</li>
+        </ul>
+    </div> <!-- Properly closed the div -->
+
+    <footer>© 2025 Nanda Kishore | All Rights Reserved</footer>
+    
+<script defer src="js/script.js"></script>
+</body>
+</html>
