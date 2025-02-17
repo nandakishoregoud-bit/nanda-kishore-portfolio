@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Skills</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div th:replace="~{header}"></div> <!-- Fixed Thymeleaf syntax -->
+    <div id="header"></div>
+<script>
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('header').innerHTML = data);
+</script>
 
     <section class="hero skills-hero">
         <h1>My Skills</h1>
@@ -38,6 +43,6 @@
 
     <footer>© 2025 Nanda Kishore | All Rights Reserved</footer>
     
-<script defer src="/js/script.js"></script>
+<script defer src="js/script.js"></script>
 </body>
 </html>
