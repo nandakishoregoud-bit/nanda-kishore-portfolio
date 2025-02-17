@@ -4,7 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const closeBtn = modal?.querySelector(".close");
     const docViewer = document.getElementById("doc-viewer");
     const downloadBtn = document.getElementById("download-btn");
-    let currentPath = window.location.pathname;
+    let navLinks = document.querySelectorAll(".nav-link");
+    let currentPath = window.location.pathname.split("/").pop();
 
     // Check if modal exists before adding event listeners
     if (modal) {
@@ -43,11 +44,13 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Navigation Active Link Highlight
-    let navLinks = document.querySelectorAll(".nav-link");
+    if (currentPath === "" || currentPath === "index.html") {
+        currentPath = "index.html"; // Default to index.html
+    }
+
     navLinks.forEach(link => {
         if (link.getAttribute("href") === currentPath) {
-            link.classList.add("active");
+            link.classList.add("active"); // Add 'active' class to current link
         }
     });
 
