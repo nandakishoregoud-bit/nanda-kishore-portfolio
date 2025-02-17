@@ -3,11 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Projects</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <script defer src="/js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/script.js"></script>
 </head>
 <body>
-    <div th:insert="~{header}"></div>
+    <div id="header"></div>
+<script>
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('header').innerHTML = data);
+</script>
 
     <section class="hero projects-hero">
         <h1>My Projects</h1>
@@ -26,7 +31,7 @@
         data-frontend="https://github.com/nandakishoregoud-bit/AdWatchRewardFrontend.git">
         View on GitHub
     </button>
-    <button class="btn preview-btn" data-doc="/docs/AdsWatchRewardFullDoc.pdf">View Document</button>
+    <button class="btn preview-btn" data-doc="docs/Ads Watch Reward Full Doc.pdf">View Document</button>
 </div>
 
         </div>
@@ -37,7 +42,7 @@
             <p>My personal webpage to showcase my resume and skills.</p>
             <div class="btn-container">
                 <a href="https://github.com/yourgithub/portfolio" class="btn" target="_blank">View on GitHub</a>
-                <button class="btn preview-btn" data-doc="/docs/portfolio.pdf">View Document</button>
+                <button class="btn preview-btn" data-doc="docs/portfolio.pdf">View Document</button>
             </div>
         </div>
         
@@ -49,7 +54,7 @@
             <p>An e-commerce platform with payment integration.</p>
             <div class="btn-container">
                 <a href="https://github.com/yourgithub/ecommerce" class="btn" target="_blank">View on GitHub</a>
-                <button class="btn preview-btn" data-doc="/docs/ecommerce.pdf">View Document</button>
+                <button class="btn preview-btn" data-doc="docs/ecommerce.pdf">View Document</button>
             </div>
         </div>
     </div>
@@ -77,7 +82,7 @@
     
 
     <footer>© 2025 My Name | All Rights Reserved</footer>
-    <script defer src="/js/script.js"></script>
+    <script defer src="js/script.js"></script>
 
 </body>
 </html>
