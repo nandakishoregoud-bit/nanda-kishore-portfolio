@@ -8,7 +8,13 @@
 </head>
 <body>
 
-<div th:insert="~{header}"></div>
+<div id="header"></div>
+<script>
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('header').innerHTML = data);
+</script>
+
 
    <section class="hero index-hero">
         <img src="images/profile.jpg" alt="Profile Picture" class="profile-pic">
