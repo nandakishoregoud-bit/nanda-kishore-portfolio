@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Navigation Active Link Highlight
-    let navLinks = document.querySelectorAll(".nav-link");
+    let navLinks = document.querySelectorAll(".nav-manu");
     navLinks.forEach(link => {
         if (link.getAttribute("href") === currentPath) {
             link.classList.add("active");
