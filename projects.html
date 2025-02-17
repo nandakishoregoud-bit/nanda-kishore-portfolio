@@ -1,1 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Projects</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+    <div id="header"></div>
+<script>
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('header').innerHTML = data);
+</script>
 
+    <section class="hero projects-hero">
+        <h1>My Projects</h1>
+        <p>Here are some of the projects I've worked on.</p>
+    </section>
+
+    <div class="projects-container">
+        <!-- Project Card -->
+        <div class="project">
+            <img src="/images/adwatch-app.png" alt="AdWatch Rewards App">
+            <h2>AdWatch Rewards App</h2>
+            <p>A platform that rewards users for watching ads and community.</p>
+            <div class="btn-container">
+    <button class="btn github-btn" 
+        data-backend="https://github.com/nandakishoregoud-bit/AdWatchBackend.git"
+        data-frontend="https://github.com/nandakishoregoud-bit/AdWatchRewardFrontend.git">
+        View on GitHub
+    </button>
+    <button class="btn preview-btn" data-doc="docs/Ads Watch Reward Full Doc.pdf">View Document</button>
+</div>
+
+        </div>
+
+        <div class="project">
+            <img src="/images/portfolio.png" alt="Portfolio Website">
+            <h2>Personal Portfolio Website</h2>
+            <p>My personal webpage to showcase my resume and skills.</p>
+            <div class="btn-container">
+                <a href="https://github.com/yourgithub/portfolio" class="btn" target="_blank">View on GitHub</a>
+                <button class="btn preview-btn" data-doc="docs/portfolio.pdf">View Document</button>
+            </div>
+        </div>
+        
+        
+
+        <div class="project">
+            <img src="/images/ecommerce.png" alt="E-Commerce App">
+            <h2>Mini E-Commerce App</h2>
+            <p>An e-commerce platform with payment integration.</p>
+            <div class="btn-container">
+                <a href="https://github.com/yourgithub/ecommerce" class="btn" target="_blank">View on GitHub</a>
+                <button class="btn preview-btn" data-doc="docs/ecommerce.pdf">View Document</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Project Document Preview -->
+    <div id="document-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe id="doc-viewer" width="100%" height="500px"></iframe>
+            <a id="download-btn" class="btn" download>Download Document</a>
+        </div>
+    </div>
+    
+    
+    <div id="repo-popup" class="popup">
+    <div class="popup-content">
+        <span class="close-popup">&times;</span>
+        <h3>Select Repository</h3>
+        <div class="btn-container">
+            <a id="backend-link" class="btn" target="_blank">Backend</a>
+            <a id="frontend-link" class="btn" target="_blank">Frontend</a>
+        </div>
+    </div>
+</div>
+    
+
+    <footer>© 2025 My Name | All Rights Reserved</footer>
+    <script defer src="js/script.js"></script>
+
+</body>
+</html>
